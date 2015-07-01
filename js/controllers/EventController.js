@@ -15,6 +15,6 @@ app.controller('EventController', ['$scope', 'events', '$routeParams', function(
     $scope.eventItem = data.events[$routeParams.id];
     // console.log($scope.eventItem);
     // console.log(data[$routeParams.id]);
-    console.log(data.events[$routeParams.id]);
+    // console.log(data.events[$routeParams.id]);
   });
 }]);
