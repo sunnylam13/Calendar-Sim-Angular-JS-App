@@ -1,5 +1,7 @@
 <!-- Format a date so it displays in the format "Friday 1/16" -->
-<h2 class="date">  </h2>
+<h2 class="date"> {{ day.date | date }} </h2>
+
+<!-- http://www.ng-newsletter.com/posts/beginner2expert-config.html -->
 
 <!--
 TODO: Loop through events and display each one with this HTML
@@ -11,3 +13,11 @@ TODO: Loop through events and display each one with this HTML
   </a>
 </div>
 -->
+
+<!-- NOTE:  if you specify the sub-object in day as day.events then you don't have to use an added dot notation step when calling the data in the angular expressions -->
+<div class="event" ng-repeat="event in day.events">
+  <a href="#/{{$index}}">
+    <h3 class="name"> {{ event.name }} </h3>
+    <p><span class="from"> {{ event.from | date:'h:mm' }} </span> - <span class="to"> {{ event.to | date:'h:mm' }} </span></p>
+  </a>
+</div>

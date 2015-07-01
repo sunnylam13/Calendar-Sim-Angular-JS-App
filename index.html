@@ -27,7 +27,13 @@
     <div class="main">
       <div class="container">
 
-        
+        <!-- ====================================
+        ANGULAR VIEW FOR ROUTING 
+        ==================================== -->
+				<!-- KEY POINT:  In the view in the main section, add <div ng-view></div>...  You need to do this right after the div.header if one exists -->
+				<!-- View the result by visiting http://localhost:8000 in the browser. When you visit /, a view is constructed by injecting views/day.html into the <div ng-view></div> in index.html. -->
+				<div ng-view></div>
+        <!-- ====================================== -->
 
       </div>
     </div>
