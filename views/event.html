@@ -1,5 +1,15 @@
+<!-- you should be calling the $scope.eventItem object here using 'eventItem' or whatever you named it in the EventController.js
+
+Wednesday, July 1, 2015 11:32 AM:  getting an undefined error...
+unlike the outbox exercise, the JSON data we want is within an array nested inside of an object property
+
+Wednesday, July 1, 2015 11:44 AM:  
+okay, I had to adjust the EventController.js to properly access the correct nested object data within the 'events' property within the data object...
+to properly call the object, I had to refer to it as eventItem (from $scope.eventItem)
+ -->
+
 <div class="event-detail">
-  <h2 class="event-name"></h2>
-  <p class="time"><span class="from">  </span> - <span class="to">  </span></p>
-  <p class="where">  </p>
+  <h2 class="event-name">{{ eventItem.name }}</h2>
+  <p class="time"><span class="from"> {{ eventItem.from | date:'h:mm' }} </span> - <span class="to"> {{ eventItem.to | date:'h:mm' }} </span></p>
+  <p class="where"> {{ eventItem.where }} </p>
 </div>

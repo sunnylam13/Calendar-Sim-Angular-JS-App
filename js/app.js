@@ -8,6 +8,11 @@ app.config(function ($routeProvider) {
       controller: 'DayController', 
       templateUrl: 'views/day.html' 
     })
+    .when('/:id',{
+    	// this '/:id' specifies that if you click on the item it takes it to another page for more details about the called object...  take a look at events.json
+    	controller: 'EventController', 
+    	templateUrl: 'views/event.html' 
+    })
     .otherwise({ 
       redirectTo: '/' 
     }); 
